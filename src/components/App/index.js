@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import Posts from 'components/Posts';
+
 import logo from './logo.svg';
 import styles from './style.scss';
 
@@ -28,9 +31,7 @@ class App extends Component {
           <img src={logo} className={styles.appLogo} alt="logo" />
           <h1 className={styles.appTitle}>Welcome to React | Count: {this.state.count}</h1>
         </header>
-        <p className={styles.appIntro}>
-          To get started, edit <code>src/components/App/index.js</code> and save to reload.
-        </p>
+        <Posts />
       </div>
     );
   }
