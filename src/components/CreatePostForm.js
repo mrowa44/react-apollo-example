@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 
+import { PostsQuery } from 'components/Posts';
+
 import styles from './CreatePostForm.scss';
 
 class CreatePostForm extends React.Component {
@@ -18,13 +20,10 @@ class CreatePostForm extends React.Component {
         title: this.state.title,
         body: this.state.body,
       },
-    })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      refetchQueries: [{
+        query: PostsQuery,
+      }],
+    });
   }
 
   handleTitleChange = ({ target }) => {

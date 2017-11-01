@@ -27,7 +27,7 @@ Posts.propTypes = {
   }).isRequired,
 };
 
-export default graphql(gql`
+export const PostsQuery = gql`
   query {
     posts {
       id
@@ -35,4 +35,6 @@ export default graphql(gql`
       body
     }
   }
-`)(Posts);
+`;
+
+export default graphql(PostsQuery)(Posts);
