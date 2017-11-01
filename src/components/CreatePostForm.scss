@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.titleInput {
+  margin-bottom: 30px;
+}
+
+.bodyInput {
+  margin-bottom: 30px;
+  min-height: 100px;
+}
